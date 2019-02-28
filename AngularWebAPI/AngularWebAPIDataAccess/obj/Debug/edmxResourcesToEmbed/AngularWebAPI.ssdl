@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AngularWebAPIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CORUSERMST">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Name" Type="varchar" MaxLength="150" />
+    <Property Name="User_Address" Type="varchar" MaxLength="150" />
+    <Property Name="User_EmailID" Type="varchar" MaxLength="50" />
+    <Property Name="User_Username" Type="varchar" MaxLength="50" />
+    <Property Name="User_Password" Type="varchar" MaxLength="50" />
+    <Property Name="User_CreatedDateTime" Type="smalldatetime" />
+    <Property Name="User_CreatedByUserID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="AngularWebAPIModelStoreContainer">
+    <EntitySet Name="CORUSERMST" EntityType="Self.CORUSERMST" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

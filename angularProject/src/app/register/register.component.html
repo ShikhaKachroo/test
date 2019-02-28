@@ -1,0 +1,65 @@
+<!--  <div>
+  <h2>
+    Register User !
+  </h2>
+ 
+<form  #registerUser="ngForm"
+(ngSubmit)="register(registerUser.value)">
+Email:<input type="text" name="User_EmailID" ngModel><br>
+UserName:<input type="text" name="User_Username" ngModel><br>
+Password:<input type="text" name="User_Password" ngModel><br>
+Name:<input type="text" name="User_Name" ngModel><br>
+Address:<input type="text" name="User_Address" ngModel><br>
+Password:<input type="text" name="User_Password" ngModel><br>
+<input type="submit" value="Register">
+
+</form>
+<input type="button" value="login" (click) ="loginPage()">
+{{msg}}
+</div> -->
+
+
+<form class="col s12 white" #registerUser="ngForm" (ngSubmit)="register(registerUser.value)">
+  <div class="row">
+    <div class="input-field col s6">
+      <input type="text" name="User_EmailID" ngModel required [pattern]="emailPattern">
+      <label data-error="Invalid email!">Email ID</label>
+    </div>
+    <div class="input-field col s6">
+      <input type="text" name="User_Username" ngModel required>
+      <label data-error="Required field!">Username</label>
+      <!-- <label [attr.data-error]="Password.errors!=null?(Password.errors.required?'Required field!':'Minimum 3 characters needed'):''">Password</label>
+   -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input type="text" name="User_Password" ngModel required>
+      <label data-error="Required field!">Password</label>
+    </div>
+
+
+    <div class="input-field col s6">
+      <input type="text" name="User_Name" ngModel required>
+      <label data-error="Required field!">Name</label>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input type="text" name="User_Address" ngModel>
+      <label data-error="Required field!">Address</label>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+        <input type="submit"  class="btn-large btn-submit" value="Register">
+      </div>
+    <div class="input-field col s6">
+        <input type="button" class="btn-large btn-submit"  value="login" (click) ="loginPage()">
+      <!-- <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-submit" (click)="loginPage()"
+        type="submit">Submit</button> -->
+    </div>
+  </div>
+</form>

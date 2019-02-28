@@ -1,0 +1,12 @@
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\AngularWebAPIDataAccess.dll.config
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\AngularWebAPIDataAccess.dll
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\AngularWebAPIDataAccess.pdb
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\EntityFramework.dll
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\EntityFramework.xml
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\obj\Debug\AngularWebAPIDataAccess.csprojAssemblyReference.cache
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\obj\Debug\AngularWebAPIDataAccess.csproj.CoreCompileInputs.cache
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\obj\Debug\AngularWebAPIDataAccess.csproj.CopyComplete
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\obj\Debug\AngularWebAPIDataAccess.dll
+E:\AngularJS\HCL\HCL\AngularWebAPI\AngularWebAPIDataAccess\obj\Debug\AngularWebAPIDataAccess.pdb
