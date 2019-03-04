@@ -1,0 +1,111 @@
+USE [master]
+GO
+/****** Object:  Database [AngularWebAPI]    Script Date: 02/28/2019 18:15:32 ******/
+CREATE DATABASE [AngularWebAPI] ON  PRIMARY 
+( NAME = N'AngularWebAPI', FILENAME = N'c:\Program Files\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS\MSSQL\DATA\AngularWebAPI.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'AngularWebAPI_log', FILENAME = N'c:\Program Files\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS\MSSQL\DATA\AngularWebAPI_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+ALTER DATABASE [AngularWebAPI] SET COMPATIBILITY_LEVEL = 100
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [AngularWebAPI].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [AngularWebAPI] SET ANSI_NULL_DEFAULT OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET ANSI_NULLS OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET ANSI_PADDING OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET ANSI_WARNINGS OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET ARITHABORT OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET AUTO_CLOSE OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET AUTO_CREATE_STATISTICS ON
+GO
+ALTER DATABASE [AngularWebAPI] SET AUTO_SHRINK OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET AUTO_UPDATE_STATISTICS ON
+GO
+ALTER DATABASE [AngularWebAPI] SET CURSOR_CLOSE_ON_COMMIT OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET CURSOR_DEFAULT  GLOBAL
+GO
+ALTER DATABASE [AngularWebAPI] SET CONCAT_NULL_YIELDS_NULL OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET NUMERIC_ROUNDABORT OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET QUOTED_IDENTIFIER OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET RECURSIVE_TRIGGERS OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET  DISABLE_BROKER
+GO
+ALTER DATABASE [AngularWebAPI] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET DATE_CORRELATION_OPTIMIZATION OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET TRUSTWORTHY OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET ALLOW_SNAPSHOT_ISOLATION OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET PARAMETERIZATION SIMPLE
+GO
+ALTER DATABASE [AngularWebAPI] SET READ_COMMITTED_SNAPSHOT OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET HONOR_BROKER_PRIORITY OFF
+GO
+ALTER DATABASE [AngularWebAPI] SET  READ_WRITE
+GO
+ALTER DATABASE [AngularWebAPI] SET RECOVERY SIMPLE
+GO
+ALTER DATABASE [AngularWebAPI] SET  MULTI_USER
+GO
+ALTER DATABASE [AngularWebAPI] SET PAGE_VERIFY CHECKSUM
+GO
+ALTER DATABASE [AngularWebAPI] SET DB_CHAINING OFF
+GO
+USE [AngularWebAPI]
+GO
+/****** Object:  Table [dbo].[CORUSERMST]    Script Date: 02/28/2019 18:15:34 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[CORUSERMST](
+	[User_ID] [int] IDENTITY(1,1) NOT NULL,
+	[User_Name] [varchar](150) NULL,
+	[User_Address] [varchar](150) NULL,
+	[User_EmailID] [varchar](50) NULL,
+	[User_Username] [varchar](50) NULL,
+	[User_Password] [varchar](50) NULL,
+	[User_CreatedDateTime] [smalldatetime] NULL,
+	[User_CreatedByUserID] [int] NULL,
+ CONSTRAINT [PK_CORUSERMST] PRIMARY KEY CLUSTERED 
+(
+	[User_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[CORUSERMST] ON
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (1, N'Shikha', N'Bangalore', N'shikha@qwe,com', N'shikha', N'123', CAST(0xA9FF0000 AS SmallDateTime), 1)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (2, N'Lucky kachroo', N'Pune', N'lucky123@gmail.com', N'lucky', N'123', CAST(0xA9FF0000 AS SmallDateTime), 1)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (4, N'wer', N'werew', N'weqwe', N'sk', N'weewr', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (5, N'Raj', N'Rajesthan', N'Raj', N'raj', N'123', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (6, N'g', N'gjh', N'qwe', N'qwe', N'jh', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (7, N'hgj', N'hg', N'ghj', N'gkjh', N'kj', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (8, N'hgj', N'hg', N'ghj', N'gkjh', N'kj', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (9, N'kj', N'jb', N'asd', N'kjh', N'mjb', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (10, N'nbcn', N'nbcn', N'hgfhg', N'hgh', N'nbc', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (11, N'kjb', N'kj', N'htht', N'jb', N'b', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (12, N'SDF', N'TESTSTSTSETE', N'ASD@QWE.SDF', N'QW', N'SEF', NULL, NULL)
+INSERT [dbo].[CORUSERMST] ([User_ID], [User_Name], [User_Address], [User_EmailID], [User_Username], [User_Password], [User_CreatedDateTime], [User_CreatedByUserID]) VALUES (13, N'', N'', N'', N'', N'', NULL, NULL)
+SET IDENTITY_INSERT [dbo].[CORUSERMST] OFF
